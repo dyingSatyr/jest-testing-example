@@ -56,3 +56,38 @@ test('Regex - should start with word The and end with word dog, should not have 
     expect(functions.fox).toMatch(/dog$/g)
     expect(functions.fox).toMatch(/\D*$/)
 })
+
+/**
+ * Arr macther
+ * toContain one value, toEqual for complete list
+ */
+test('Shopping list should contain enormous amounts of bacon, but not diet coke', () => {
+    expect(functions.shoppingList).toContain('enormous amounts of bacon')
+    expect(functions.shoppingList).not.toContain('diet coke')
+})
+
+
+/**
+ * Async tests
+ * Promise based
+ */
+
+test('Fetched user name should be Leanne Graham - promise', () => {
+    expect.assertions(1); //Neccessary when working with async data
+    return functions.asyncFetchUser() //api call needs to be returned
+    .then(data => {
+        expect(data.name).toEqual('Leanne Graham')
+    })
+})
+
+
+/**
+ * Async tests
+ * async await
+ */
+
+test('Fetched user name should be Leanne Graham - async',async () => { //function is now async
+    expect.assertions(1); //Neccessary when working with async data
+    const data = await functions.asyncFetchUser() //api call is now awaited
+    expect(data.name).toEqual('Leanne Graham')
+})
