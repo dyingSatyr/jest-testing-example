@@ -1,0 +1,22 @@
+{
+  "name": "jest-testing-example",
+  "version": "1.0.0",
+  "description": "jest example testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyingSatyr/jest-testing-example.git"
+  },
+  "author": "Boris Grabovac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyingSatyr/jest-testing-example/issues"
+  },
+  "homepage": "https://github.com/dyingSatyr/jest-testing-example#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
